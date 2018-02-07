@@ -252,6 +252,7 @@ a.header__sub-menu-link:hover {
   background-color: #083D83;
   width: 100%;
   padding: 3px 0px 20px;
+  margin-top: -3px;
 }
 .pool__locator--modal>span, input{
 	padding-right: 10px;
