@@ -254,6 +254,7 @@ a.header__sub-menu-link:hover {
   display: flex;
   justify-content: center;
   align-content: flex-start;
+  padding-top: 3px;
 }
 .pool__locator--modal>span, input{
 	padding-right: 10px;
