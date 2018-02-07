@@ -251,18 +251,16 @@ a.header__sub-menu-link:hover {
 .pool-locator__header-container{
   background-color: #083D83;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: flex-start;
-  padding-top: 3px;
+  padding: 3px 0px 20px;
 }
 .pool__locator--modal>span, input{
 	padding-right: 10px;
 }
 #pool-locator__logo{
-	background-color: #083d83;
-	width: 60%;
-  padding: 0px 0px 20px;
+  margin: 0 auto;
+  display: block;
+  background-color: #083d83;
+  padding: 0;
 }
 
 .pool__locator--modal{
