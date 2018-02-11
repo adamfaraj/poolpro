@@ -154,7 +154,7 @@
 
 		// //check if user entered a phone number
 		$modalInput[1].addEventListener('keyup', function() {
-			if($modalInput[1].checkValidity() == true && $modalInput[1].length == 10){
+			if($modalInput[1].checkValidity() == true && $modalInput[1].value.length == 10){
 				$modalForm[1].setAttribute("src", 'src/images/checkmark-circle.png');
 			} else {
 				$modalForm[1].setAttribute("src", 'src/images/circle-form.png');
