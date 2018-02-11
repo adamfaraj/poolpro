@@ -42,7 +42,7 @@
 		dom.dealerEmailModal = $('.dealer__email-modal-container');
 		dom.dealerEmailSpan = $('.modal_from-span-dealerName');
 		dom.sendEmailLink  = $('.sendEmailLink');
-		dom.emailOverlay = dom.document.find('.dealer__email-overlay');
+		// dom.emailOverlay = $('.dealer__email-overlay');
 
 	};
 
@@ -54,6 +54,7 @@
 		dom.findPoolButton.mouseleave(locationIconNotHovered);
 		dom.findPoolButton.on('click touch', findPoolClicked);
 		dom.overlay.on('click touchstart', onModalClicked);
+		// dom.emailOverlay.on('click touchstart', onModalClicked);
 		dom.modalClose.on('click touch', onModalClosedClicked);
 		dom.modalButton.on('click touchstart', onModalButtonClicked);
 		dom.modalZipcode.on('keydown', onEnterUserSearch);
@@ -82,17 +83,21 @@
 	}
 
 	
-
 	var onModalClosedClicked = function() {
-	     dom.overlay[0].style.visibility = 'hidden';
+		 dom.overlay[0].style.visibility = 'hidden';
+		 
 	   }
 
 	var onModalClicked = function(event) {
+		var node = dom.template.prop('content');
+		var $emailOverlay = $(node).find('.dealer__email-overlay');
 		if (event.target == dom.overlay[0]) {
 			dom.overlay[0].style.visibility = 'hidden';
 		}
-	};
 
+	};
+	
+	
 	var onModalButtonClicked = function() {
 		if (dom.modalZipcode[0].value == "28205" || dom.modalZipcode[0].value.toUpperCase() == "CHARLOTTE, NC") {
 			dom.dealersReturned[0].style.display = "flex";
@@ -130,6 +135,69 @@
 		$('.dealerEmailButton_name').text($dealerNameElement.text());
 		$('.modal_form-span-dealerName').text($dealerNameElement.text());
 		$('.sendEmailLink').attr('href', 'mailto:' + $dealerEmail.text());
+		$('.modal_form-container-name')[0].value = "";
+		$('.modal__form--invalid')[0].setAttribute("src", 'src/images/circle-form.png');
+		$('.modal_form-container-name').focus();
+		var $modalInput = $('.modal__input');
+		var $modalForm = $('.modal__form--invalid');
+
+		//check if user entered a name
+		$modalInput[0].addEventListener('keyup', function() {
+			if($modalInput[0].checkValidity() == true){
+				$modalForm[0].setAttribute("src", 'src/images/checkmark-circle.png');
+				
+			} else {
+				$modalForm[0].setAttribute("src", 'src/images/circle-form.png');
+			};
+
+		})
+
+		// //check if user entered a phone number
+		$modalInput[1].addEventListener('keyup', function() {
+			if($modalInput[1].checkValidity() == true && $modalInput[1].length == 10){
+				$modalForm[1].setAttribute("src", 'src/images/checkmark-circle.png');
+			} else {
+				$modalForm[1].setAttribute("src", 'src/images/circle-form.png');
+			};
+
+		})
+
+		// //check if user entered an email
+		$modalInput[2].addEventListener('keyup', function() {
+			if($modalInput[2].checkValidity() == true){
+				$modalForm[2].setAttribute("src", 'src/images/checkmark-circle.png');
+			} else {
+				$modalForm[2].setAttribute("src", 'src/images/circle-form.png');
+			};
+
+		})
+		// var node = dom.template.prop('content');
+		// var $emailOverlay = $(node).find('.dealer__email-overlay');
+        // var $input = $(node).find('#modalName');
+		// var $check = $(node).find('.modal__form--invalid');
+		
+		// $emailOverlay.on('click', function() {
+		// 	if($emailOverlay[0].style.display == 'block') {
+		// 		$emailOverlay[0].style.visibility == 'none';
+		// 	}
+		// });
+
+		// $input.on('keyup', function() {
+        //     console.log($input);
+        //     console.log($input.checkValidity());
+    
+    
+        //     if ($input[0].checkValidity() == true) {
+        //       $check[0].setAttribute("src", 'src/images/checkmark-circle.png');
+        //       console.log($check);
+        //     } else {
+        //         $check[0].setAttribute("src", "src/images/circle-form.png");
+        //       console.log($check);
+              
+        //     }
+        // })
+		// console.log($input);
+		// console.log($input[0]);
   };
 	
 
