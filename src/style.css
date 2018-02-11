@@ -14,7 +14,7 @@ a {
 }
 
 .mobile__topmenu, .mobile__header-container, .dropdown, .mobile__dealer-filter__count, .dealer-filter.filter-container.mobile__dealer-filter, .modal_form-zipcode-span, .modal_form-container-zipcode, .radio_label_text, .mobile__footer, .mobile_checkbox, .mobile_input, .tap-to-call {
-	display: none;
+  display: none;
 }
 
 .topmenu {
@@ -31,7 +31,7 @@ a {
 }
 
 .topmenu__link {
-	font-size: 13px;
+  font-size: 13px;
   margin-right: 25px;
   color: white;
   text-decoration: none;
@@ -98,12 +98,12 @@ nav{
 }
 
 .header__menu-container:hover .arrow{
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
-    transition-duration: 0.3s;
-    cursor: pointer;
-    background-color: #f6f6f6;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  transition-duration: 0.3s;
+  cursor: pointer;
+  background-color: #f6f6f6;
 }
 
 .header__menu-container:hover{
@@ -112,33 +112,33 @@ nav{
 }
 
 .header__sub-menu {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-bottom: 5px solid #46d6d6;
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-bottom: 5px solid #46d6d6;
 }
 
 .header__sub-menu a {
-    color: black;
+  color: black;
 }
 
 .header__menu-container:hover .header__sub-menu {
-    display: flex;
-    margin-top: 45px;
-    margin-left: -140px;
-    flex-wrap: wrap;
-    padding: 20px;
+  display: flex;
+  margin-top: 45px;
+  margin-left: -140px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .header__sub-menu-link {
-    width: 50%;
-    padding: 9px 0px;
+  width: 50%;
+  padding: 9px 0px;
 }
 
 a.header__sub-menu-link:hover {
-    color: #46d6d6;
+  color: #46d6d6;
 }
 
 .location_icon{
@@ -198,16 +198,21 @@ a.header__sub-menu-link:hover {
   align-content: center;
   margin: auto;
   -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.3s;
-    max-width: 600px;
-    max-height: 600px;
-    margin-top: 35px;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+  max-width: 600px;
+  max-height: 600px;
+  margin-top: 35px;
 }
-.pool-locator__form-container input, .pool-locator__form-container button {
+
+.pool-locator__form-container input {
+  padding: 0px 10px;
+  height: 32px;
+}
+.pool-locator__form-container button {
+  margin: 15px 0px;
 	padding: 10px 20px;
-	margin: 10px;
 }
 
 .pool-locator__instructions{
@@ -257,11 +262,12 @@ a.header__sub-menu-link:hover {
 .pool__locator--modal>span, input{
 	padding-right: 10px;
 }
-#pool-locator__logo{
+.pool-locator__logo{
   margin: 0 auto;
   display: block;
   background-color: #083d83;
   padding: 0;
+  width: 220px;
 }
 
 .pool__locator--modal{
@@ -603,6 +609,7 @@ label {
 
 .modal_form{
   background-color: white;
+  cursor: default;
 }
 
 .modal_form-parent-container{
@@ -621,10 +628,13 @@ label {
   width: 90%;
 }
 
-.modal_input{
+.modal__input{
   height: 40px;
   border: 1px solid lightgray;
+  font-size: 20px;
+  /* background-image: url('images/checkmark-circle.png'); */
 }
+
 
 .modal_spans{
   text-align: left;
@@ -662,10 +672,30 @@ label {
 	color: white;
 }
 
-.modal_form-container-name:valid, .modal_form-container-email:valid {
+.modal__form-input-title{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+/* .modal_form-container-name:valid, .modal_form-container-email:valid, .modal_form-container-phone:valid {
   background-image: url('images/checkmark-circle.png');
   background-repeat: no-repeat;
-  background-position-x: 390px;
+  /* background-position-x: 390px; 
+}
+
+.modal_form-container-name:invalid, .modal_form-container-email:invalid, .modal_form-container-phone:invalid {
+  background-image: url('images/circle-form.png');
+  background-repeat: no-repeat;
+  /* background-position-x: 390px;
+} */
+
+#modal__form-input-phone{
+  width: 50%;
+}
+
+.modal__form--invalid{
+  height: 30px;
 }
 
 
@@ -677,11 +707,28 @@ label {
   color: black;
 }
 
-.sendEmail-button{
+/* .sendEmail-button{
   display: flex;
   justify-content: center;
   padding: 15px;
   align-items: center;
+} */
+
+.sendEmailLink{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  color: black;
+  font-size: 15px;
+}
+
+.sendEmailLink:hover{
+  color: black;
+}
+
+.email-arrow{
+  padding-left: 10px;
 }
 
 .modal_form-footer-container{
