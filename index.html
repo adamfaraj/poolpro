@@ -28,7 +28,7 @@
 				<img src="src/images/pool-pros-logo-footer.png" class="pool-locator__logo">
 			</div>
 			<span class="pool-locator__instructions">Please enter 28205 to see demo</span>
-			<input class="pool-locator__user-location" type="text" placeholder="Enter Zipcode" id="modal_content-zipcode" value="28205" autofocus></input>
+			<input class="pool-locator__user-location" type="text" placeholder="Enter Zipcode" autofocus></input>
 			<button class="pool-locator__button">Find a Pool Pro</button>
 			<div id="map"></div>
 		</div>
@@ -41,7 +41,7 @@
 		</a>
 		<nav class="header__menu--desktop">
 			<div class="header__menu-container">
-				<li class="header__menu-main" id="pools">Pools &amp; Spas</li>
+				<li class="header__menu-main">Pools &amp; Spas</li>
 				<img src="src/images/next-arrow.png" class="arrow">
 				<ul class="header__sub-menu">
 					<a href="#" class="header__sub-menu-link">All Products</a>
@@ -57,7 +57,7 @@
 				</ul>
 			</div>
 			<div class="header__menu-container">
-				<li class="header__menu-main" id="supplies">Supplies</li>
+				<li class="header__menu-main">Supplies</li>
 				<img src="src/images/next-arrow.png" class="arrow">
 				<ul class="header__sub-menu">
 					<a href="#" class="header__sub-menu-link">Filters</a>
@@ -67,7 +67,7 @@
 				</ul>
 			</div>
 			<div class="header__menu-container">
-				<li class="header__menu-main" id="supplies">Resources</li>
+				<li class="header__menu-main">Resources</li>
 				<img src="src/images/next-arrow.png" class="arrow">
 				<ul class="header__sub-menu">
 					<a href="#" class="header__sub-menu-link">Salt vs Chlorine</a>
@@ -79,7 +79,7 @@
 				</ul>
 			</div>
 			<div class="header__menu-container">
-				<li class="header__menu-main" id="supplies">Services</li>
+				<li class="header__menu-main">Services</li>
 				<img src="src/images/next-arrow.png" class="arrow">
 				<ul class="header__sub-menu">
 					<a href="#" class="header__sub-menu-link">Pool Service</a>
@@ -256,20 +256,20 @@
 										<div class="modal__form-parent-container">
 											<div class="modal__form-container">
 												<div class="modal__form-input-title">
-													<span class="modal__spans modal__form-name-span">First and Last Name</span>
+													<span class="modal__spans">First and Last Name</span>
 													<img src="src/images/circle-form.png" class="modal__form--invalid">
 												</div>
-												<input type="text" id="modalName" name="name" class="modal__input modal__form-container-name form-control form-control-success" required>
+												<input type="text" name="name" class="modal__input modal__form-container-name" required>
 												<div class="modal__form-input-title" id="modal__form-input-phone">
-													<span class="modal__spans modal__form-phone-span">Phone number</span>
+													<span class="modal__spans">Phone number</span>
 													<img src="src/images/circle-form.png" class="modal__form--invalid">
 												</div>
 												<input type="tel" name="phoneNumber" class="modal__input modal__form-container-phone" maxlength = "10" required>
 												<div class="modal__form-input-title">
-													<span class="modal__spans modal__form-email-span">Email address</span>
+													<span class="modal__spans">Email address</span>
 													<img src="src/images/circle-form.png" class="modal__form--invalid">
 												</div>
-												<input type="email" name="email" class="modal__input modal__form-container-email form-control form-control-success" required>
+												<input type="email" name="email" class="modal__input modal__form-container-email" required>
 												<span class="modal__spans modal__form-comments-span">Comments or questions</span>
 												<textarea type="text" name="comment" class="modal__input modal__form-container-comments"></textarea>
 												<span class="modal__spans modal__form-pool-span">Do you currently own a pool or spa?</span>
