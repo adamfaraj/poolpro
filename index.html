@@ -16,19 +16,19 @@
 		<a href="#" class="topmenu__link">Dealers and Distributors</a>
 		<a href="#"  class="topmenu__link">Commercial Service</a>
 		<a href="#" class="topmenu__icon">
-			<img class="topmenu__image" src="src/images/action-commercial-icon.png">
+			<img class="topmenu__action-icon" src="src/images/action-commercial-icon.png">
 		</a>
 	</nav>
 
 	<!-- render the overlay -->
 	<div class="pool-locator__overlay">
 		<div class="pool-locator__form-container">
-			<p class="pool-locator__span">&times;</p>
+			<p class="pool-locator__close">&times;</p>
 			<div class="pool-locator__header-container">
 				<img src="src/images/pool-pros-logo-footer.png" class="pool-locator__logo">
 			</div>
-			<span class="pool-locator__instructions">Please enter 28205 or Charlotte, NC to see demo</span>
-			<input class="pool-locator__zipcode" type="text" placeholder="Enter Zipcode or City, State" id="modal_content-zipcode" value="28205" autofocus></input>
+			<span class="pool-locator__instructions">Please enter 28205 to see demo</span>
+			<input class="pool-locator__user-location" type="text" placeholder="Enter Zipcode" id="modal_content-zipcode" value="28205" autofocus></input>
 			<button class="pool-locator__button">Find a Pool Pro</button>
 			<div id="map"></div>
 		</div>
@@ -88,14 +88,14 @@
 					<a href="#" class="header__sub-menu-link">Spa Installation</a>
 				</ul>
 			</div>
-			<a href="#"><button class="header__menu-button" find_a_pool_button><img src="src/images/location-icon.png" class="location_icon">Find a Pool Pro</button></a>
+			<a href="#"><button class="header__menu-button"><img src="src/images/location-icon.png" class="header__location-icon">Find a Pool Pro</button></a>
 		</nav>
 	</header>
 
 	<!-- render the mobile header -->
 	<header class="mobile__header-container">
 		<a href="index.html"><img src="src/images/pool-pros-logo.png" class="mobile__header-logo"></a>
-		<a href="#"><button class="header__menu-button"><img src="src/images/location-icon.png" class="location_icon">Find a Pro</button></a>
+		<a href="#"><button class="header__menu-button"><img src="src/images/location-icon.png" class="header__location-icon">Find a Pro</button></a>
 		<image src = "src/images/menu-icon-mobile.png" class="mobile-header__icon">
 	</header>
 	<div class="mobile-header__container--show">
@@ -183,6 +183,7 @@
 					<input type="checkbox" name="dealerCertification" value="Commercial Pro" class="dealer-filter__dealer-certification-checkbox">
 					<span class="filter__label-span">Commercial</span>
 				</label>
+				<img src="src/images/tool-tip-icon-filtering.png" class="dealer-filter__tool-tip">
 			</section>
 
 			<!-- Render the mobile dropdown filter -->
@@ -227,8 +228,8 @@
 				</div>
 			</div>
 
-			<!-- Render the dealers coming from JSON file -->
-			<div class="dealer-container">
+			<!-- Render the dealers coming from provided JSON file -->
+			<div class="dealer__container">
 				<template id="tmplt">
 					<section class="dealer">
 						<div class="dealer__name-container">
@@ -238,43 +239,43 @@
 						<span class="dealer__cant-talk">Can't talk now? Click below to send an email.</span>
 						<span class="dealer__email--hidden"></span>
 						<button class="dealer__email-button" data-toggle="modal" data-target="#dealer__email-modal" id="login_link"></button>
-						<div class="modal" id="dealer__email-modal" style="display: none;">
+						<div class="modal" id="dealer__email-modal">
 							<div class="dealer__email-overlay">
 								<div class="dealer__email-modal-container">
-									<header class="modal_header">
-										<div class="modal_header-span-container">
-											<span class="modal_email">EMAIL</span>
-											<span class="modal_exit" data-dismiss="modal">X</span>
+									<header class="modal__header">
+										<div class="modal__header-span-container">
+											<span class="modal__email">EMAIL</span>
+											<span class="modal__exit" data-dismiss="modal">X</span>
 										</div>
-										<h1 class="dealerEmailButton_name"></h1>
+										<h1 class="dealer__email-modal-title"></h1>
 									</header>
-									<form method="post" action="process_user_form_submission.php" class="modal_form">
-										<div class="modal_form-span-container">
-											<span class="modal_form-span">Fill out the form below and <span class="modal_form-span-dealerName"></span> will get in touch.</span>
+									<form method="post" action="process_user_form_submission.php" class="modal__form">
+										<div class="modal__form-span-container">
+											<span class="modal__form-span">Fill out the form below and <span class="modal__form-span-dealerName"></span> will get in touch.</span>
 										</div>
-										<div class="modal_form-parent-container">
-											<div class="modal_form-container">
+										<div class="modal__form-parent-container">
+											<div class="modal__form-container">
 												<div class="modal__form-input-title">
-													<span class="modal_spans modal_form-name-span">First and Last Name</span>
+													<span class="modal__spans modal__form-name-span">First and Last Name</span>
 													<img src="src/images/circle-form.png" class="modal__form--invalid">
 												</div>
-												<input type="text" id="modalName" name="name" class="modal__input modal_form-container-name form-control form-control-success" required>
+												<input type="text" id="modalName" name="name" class="modal__input modal__form-container-name form-control form-control-success" required>
 												<div class="modal__form-input-title" id="modal__form-input-phone">
-													<span class="modal_spans modal_form-phone-span">Phone number</span>
+													<span class="modal__spans modal__form-phone-span">Phone number</span>
 													<img src="src/images/circle-form.png" class="modal__form--invalid">
 												</div>
-												<input type="tel" name="phoneNumber" class="modal__input modal_form-container-phone" maxlength = "10" required>
+												<input type="tel" name="phoneNumber" class="modal__input modal__form-container-phone" maxlength = "10" required>
 												<div class="modal__form-input-title">
-													<span class="modal_spans modal_form-email-span">Email address</span>
+													<span class="modal__spans modal__form-email-span">Email address</span>
 													<img src="src/images/circle-form.png" class="modal__form--invalid">
 												</div>
-												<input type="email" name="email" class="modal__input modal_form-container-email form-control form-control-success" required>
-												<span class="modal_spans modal_form-comments-span">Comments or questions</span>
-												<textarea type="text" name="comment" class="modal__input modal_form-container-comments"></textarea>
-												<span class="modal_spans modal_form-pool-span">Do you currently own a pool or spa?</span>
-												<div class="modal_form-pool-question">
-													<button type="button" class="modal_form-pool-question-button" value="yes">Yes</button>
-													<button type="button" class="modal_form-pool-question-button" value="no">No</button>
+												<input type="email" name="email" class="modal__input modal__form-container-email form-control form-control-success" required>
+												<span class="modal__spans modal__form-comments-span">Comments or questions</span>
+												<textarea type="text" name="comment" class="modal__input modal__form-container-comments"></textarea>
+												<span class="modal__spans modal__form-pool-span">Do you currently own a pool or spa?</span>
+												<div class="modal__form-pool-question">
+													<button type="button" class="modal__form-pool-question-button" value="yes">Yes</button>
+													<button type="button" class="modal__form-pool-question-button" value="no">No</button>
 													<label class="radio_label--yes">
 														<input type="radio" name="ownsPool" value="yes" class="mobile_checkbox">
 														<span class="radio_label_text">Yes</span>
@@ -284,13 +285,13 @@
 														<span class="radio_label_text">No</span>
 													</label>
 												</div>
-													<a href="#" class="sendEmailLink">
+													<a href="#" class="dealer__email-send">
 														Send my email
-														<img src="src/images/next-arrow.png" class="email-arrow">
+														<img src="src/images/next-arrow.png" class="dealer__email-arrow">
 													</a>
 											</div>
-											<div class="modal_form-footer-container">
-												<p class="modal_form-footer">*This is where the fine print goes such as all rights are reserved to Pool Pros and what not.</p>
+											<div class="modal__form-footer-container">
+												<p class="modal__form-footer">*This is where the fine print goes such as all rights are reserved to Pool Pros and what not.</p>
 											</div>
 										</div>
 									</form>
@@ -314,20 +315,12 @@
 			<div class="bottom__social-media-container">
 				<span class="bottom__tag">CONNECT WITH US</span>
 				<div class="bottom__header-icon-container">
-					<span><a href="#"><img src="src/images/twitter-icon.png" class="bottom__tag bottom__sm"></a></span>
-					<span><a href="#"><img src="src/images/facebook-icon.png" class="bottom__tag bottom__sm"></a></span>
-					<span><a href="#"><img src="src/images/youtube-icon.png" class="bottom__tag bottom__sm"></a></span>
+					<span><a href="#"><img src="src/images/twitter-icon.png" class="bottom__tag"></a></span>
+					<span><a href="#"><img src="src/images/facebook-icon.png" class="bottom__tag"></a></span>
+					<span><a href="#"><img src="src/images/youtube-icon.png" class="bottom__tag"></a></span>
 				</div>
 			</div>
 	</section>
-
-	<!-- render the footer-->
-	<footer class="footer">
-		<a href="#" class="copyright footer__text">&copy; 2017 Pool Pros</a>
-		<a href="#" class="privacyPolicy footer__text">Privacy Policy</a>
-		<a href="#" class="terms footer__text">Terms and Conditions</a>
-	</footer>
-
 
 	<!-- Render the mobile top menu -->
 	<nav class="mobile__topmenu">
@@ -343,19 +336,11 @@
 			</a>
 		</div>
 	</nav>
-
-
-	<!-- Render the mobile footer -->
-	<footer class="mobile__footer">
-		<a href="#">
-			<p class="copyright footer__text">&copy; 2017 Pool Pros</p>
-		</a>
-		<a href="#">
-			<p class="privacyPolicy footer__text">Privacy Policy</p>
-		</a>
-		<a href="#">
-			<p class="terms footer__text">Terms and Conditions</p>
-		</a>
+	<!-- render the footer-->
+	<footer class="footer">
+		<a href="#" class="copyright footer__text">&copy; 2017 Pool Pros</a>
+		<a href="#" class="privacyPolicy footer__text">Privacy Policy</a>
+		<a href="#" class="terms footer__text">Terms and Conditions</a>
 	</footer>
 
 
@@ -375,7 +360,6 @@
 	<script type="text/javascript" src="src/js/dealer-filter-menu.js"></script>
 	<script type="text/javascript" src="src/js/dealer-display.js"></script>
 	<script type="text/javascript" src="src/js/dealer-mobile-menu.js"></script>
-	<!-- <script type="text/javascript" src="src/js/dealer-email-modal.js"></script> -->
 	<script type="text/javascript" src="src/js/map.js"></script>			
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVbUylPndh3fGgedTw0zwWLlVZMRAYNpI&callback=initMap"></script>
 
