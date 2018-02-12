@@ -798,6 +798,7 @@ MOBILE STYLESHEET
     width: 70px;
     margin-top: 15px;
   }
+
   .mobile-header__container--hidden {
     display:none;
   }
@@ -867,9 +868,9 @@ MOBILE STYLESHEET
     margin: 0;
   }
   
-	.dealers__not-returned {
-		padding: 100px 0px 50px;
-	}
+  .dealers__not-returned {
+    padding: 100px 0px 50px;
+  }
 
   .header__menu-button {
     margin: 0;
