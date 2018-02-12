@@ -14,8 +14,7 @@
 
 
 	// cache commonly used dom nodes
-	var cacheDom = function() {
-
+	function cacheDom() {
 		dom = {};
 		dom.document = $(document);
 		dom.filter_count = dom.document.find('.dealer-filter__count');
@@ -26,7 +25,7 @@
 
 
 	// bind event handlers
-	var bindEventHandlers = function() {
+	function bindEventHandlers() {
 
 		//filter handler for desktop
 		dom.dealerTypeCheckboxes.on('click', onDealerTypeCheckboxClicked);
@@ -37,8 +36,7 @@
 
 
 	// process the dealer checkbox click
-	var onDealerTypeCheckboxClicked = function() {
-
+	function onDealerTypeCheckboxClicked() {
 		var $checkbox = $(this);
 		var isChecked = $checkbox.prop('checked');
 		var thisCertification = $checkbox.val();
@@ -56,6 +54,7 @@
 
 		}
 
+		
 		// trigger custom event to let other modules know filter criteria changed
 		dom.document.trigger({
 			type: 'dealer_filter_criteria_changed',
@@ -65,7 +64,7 @@
 
 
 	// initialize the module
-	var init = function() {
+	function init() {
 		cacheDom();
 		bindEventHandlers();
 	};

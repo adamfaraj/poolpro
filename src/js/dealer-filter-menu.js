@@ -1,8 +1,6 @@
 /*****
-  The Dealer-Display module is designed to
-  listen for the any criteria changes from the
-  "dealer filter" and update the displayed dealers
-  accordingly.
+  The dealer-filter-menu module either shows or hides the mobile
+  dropdown menu for the dealer filter criteria.
 *****/
 
 
@@ -11,20 +9,23 @@
 
     var dom;
 
- // cache necessary dom nodes for this module
-   var cacheDOM = function() {
+    // cache necessary DOM nodes for this module
+    function cacheDOM() {
         dom = {};
         dom.document = $(document);
         dom.dropdownButton = dom.document.find('.dropdown-button');
         dom.dropdownMenu = dom.document.find('.dropdown-menu-container--hidden');
    };
 
- // bind event handlers for this module
-   var bindEventHandlers = function() {
-       dom.dropdownButton.on('click', dropdownButtonClicked);
-   };
 
-   var dropdownButtonClicked = function() {
+    // bind event handlers for this module
+    function bindEventHandlers() {
+       dom.dropdownButton.on('click', dropdownButtonClicked);
+    };
+
+
+    // show or hide dropdown menu when user clicks
+    function dropdownButtonClicked() {
         if (dom.dropdownMenu.hasClass("dropdown-menu-container--hidden")) {
             dom.dropdownMenu.removeClass("dropdown-menu-container--hidden").addClass("dropdown-menu-container--show");
         } else {
@@ -32,15 +33,16 @@
         }
     };
 
- // initialize the module
-   var init = function() {
+    
+    // initialize the module
+    function init() {
        cacheDOM();
        bindEventHandlers();
- };
+    };
 
 
- // initialize this bad boy!
- init();
+    // initialize this bad boy!
+    init();
 
 
 }(jQuery));
