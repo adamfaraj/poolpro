@@ -1143,12 +1143,12 @@ MOBILE STYLESHEET
   }
 
   .topmenu__link-container {
-    padding: 10px 25px 10px;
+    padding: 10px;
     border-bottom: 1px solid #a0b5d5;
+    font-size: 13px;
   }
 
   .topmenu__link {
-    font-size: 11px;
     padding: 0px 15px;
     margin: 0;
   }
