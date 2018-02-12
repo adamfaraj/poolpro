@@ -5,74 +5,54 @@ html, body {
   height: 100%;
 }
 
-a:hover {
-  color: white;
-}
-
 a {
   text-decoration: none;
 }
 
-.mobile__topmenu, .mobile__header-container, .dropdown, .mobile__dealer-filter__count, .dealer-filter.filter-container.mobile__dealer-filter, .modal_form-zipcode-span, .modal_form-container-zipcode, .radio_label_text, .mobile__footer, .mobile_checkbox, .mobile_input, .tap-to-call {
+.mobile__topmenu, .mobile__header-container, .dropdown, .mobile__dealer-filter__count, .dealer-filter.filter-container.mobile__dealer-filter, .radio_label_text, .mobile_checkbox, .tap-to-call{
   display: none;
 }
 
 .topmenu {
   background-color: #083D83;
   display: flex;
-  width: 100%;
   justify-content: flex-end;
   align-items: center;
   height: 42px;
-}
-
-.topmenu__container {
-  margin-right: 50px;
 }
 
 .topmenu__link {
   font-size: 13px;
   margin-right: 25px;
   color: white;
-  text-decoration: none;
 }
 
 .topmenu__link:hover {
   color: #46d6d6;
 }
 
-.topmenu__image {
+.topmenu__action-icon {
   width: 15px;
   margin-right: 50px;
 }
 
-
-.header{
+.header {
 	display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__logo{
+.header__logo {
 	height: 32px;
 	margin: 35px 84px;
 }
 
-nav{
+.header__menu--desktop {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-}
-
-.header__container{
-  display: flex;
-  list-style: none;
-  padding: 0px 15px;
-  margin: 0;
 }
 
 .header__menu-container {
-	display: block;
 	height: 107px;
   border-top: 5px solid white;
   list-style-type: none;
@@ -87,7 +67,7 @@ nav{
   font-size: 20px;
 }
 
-.arrow{
+.arrow {
   height: 20px;
   -ms-transform: rotate(0deg); /* IE 9 */
   -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
@@ -97,7 +77,7 @@ nav{
   margin-right: 5px;
 }
 
-.header__menu-container:hover .arrow{
+.header__menu-container:hover .arrow {
   -ms-transform: rotate(90deg); /* IE 9 */
   -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
   transform: rotate(90deg);
@@ -106,7 +86,7 @@ nav{
   background-color: #f6f6f6;
 }
 
-.header__menu-container:hover{
+.header__menu-container:hover {
   background-color: #f6f6f6;
   border-top: 5px solid #46d6d6;
 }
@@ -118,9 +98,6 @@ nav{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-bottom: 5px solid #46d6d6;
-}
-
-.header__sub-menu a {
   color: black;
 }
 
@@ -130,23 +107,25 @@ nav{
   margin-left: -140px;
   flex-wrap: wrap;
   padding: 20px;
+  width: 460px;
 }
 
 .header__sub-menu-link {
   width: 50%;
   padding: 9px 0px;
+  color: black;
 }
 
-a.header__sub-menu-link:hover {
+.header__sub-menu-link:hover {
   color: #46d6d6;
 }
 
-.location_icon{
+.header__location-icon {
   height: 17px;
   padding: 0px 5px;
 }
 
-.header__menu-button{
+.header__menu-button {
   background-color: white;
   border: 1px solid #216ddf;
   color: #216ddf;
@@ -162,29 +141,17 @@ a.header__sub-menu-link:hover {
   justify-content: center;
 }
 
-.header__menu-button:hover{
+.header__menu-button:hover {
   background-color: #216ddf;
   color: white;
-}
-#zipcode_text{
-	color: white;
-}
-.modal_button-container{
-  display: flex;
-  background-color: white;
-}
-
-.modal_button{
-  margin: 0 auto;
-  margin-top: 125px;
 }
 
 #map {
   height: 300px;
   width: 100%;
- }
+}
 
-.pool-locator__form-container{
+.pool-locator__form-container {
   position: fixed;
   top: 0;
   right: 0;
@@ -194,75 +161,51 @@ a.header__sub-menu-link:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  align-content: center;
   margin: auto;
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.3s;
   max-width: 600px;
   max-height: 600px;
   margin-top: 35px;
 }
 
-.pool-locator__form-container input {
-  padding: 0px 10px;
-  height: 32px;
-}
-.pool-locator__form-container button {
-  margin: 15px 0px;
-	padding: 10px 20px;
+.pool-locator__user-location {
+  padding: 5px;
 }
 
-.pool-locator__instructions{
-	padding: 10px;
+.pool-locator__instructions {
+  padding: 10px;
 	font-size: 13px;
 }
 
-.pool-locator__button{
+.pool-locator__button {
+  margin: 15px 0px;
+  padding: 15px 20px;
 	background-color: #216ddf;
 	color: white;
 	border: none;
 	border-radius: 3px;
-	padding: 10px;
 	cursor: pointer;
 }
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
 
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-.modal_content-text{
-  width: 50%;
-}
-.pool-locator__span{
+.pool-locator__close {
   color: #aaaaaa;
-  float: right;
   font-size: 30px;
   font-weight: bold;
   text-align: right;
-  margin-left: auto;
   cursor: pointer;
   background-color: #083d83;
   width: 100%;
   margin: 0;
 }
 
-.pool-locator__header-container{
+.pool-locator__header-container {
   background-color: #083D83;
   width: 100%;
   padding: 3px 0px 20px;
   margin-top: -3px;
 }
-.pool__locator--modal>span, input{
-	padding-right: 10px;
-}
-.pool-locator__logo{
+
+
+.pool-locator__logo {
   margin: 0 auto;
   display: block;
   background-color: #083d83;
@@ -270,17 +213,7 @@ a.header__sub-menu-link:hover {
   width: 220px;
 }
 
-.pool__locator--modal{
-	background-color: gray;
-	display: flex;
-	width: 50%;
-	height: 100px;
-	align-items: center;
-	margin: 0 auto;
-	margin-top: 200px;
-	justify-content: flex-start;
-}
-.pool-locator__overlay{
+.pool-locator__overlay {
   position: absolute;
   visibility: hidden;
   top: 0;
@@ -297,11 +230,12 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.mobile-header__container--show{
+
+.mobile-header__container--show {
   display: none;
 }
 
-.main__image{
+.main__image {
   background-image: url("images/hero-image.png");
   background-position: center;
   background-size: cover;
@@ -312,11 +246,10 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
   flex-direction: column;
   color: white;
-  text-align: center;
   opacity: 0.8;
 }
 
-.main__image-header{
+.main__image-header {
   font-weight: 300;
   font-size: 48px;
   text-shadow:
@@ -329,7 +262,7 @@ input[type=number]::-webkit-outer-spin-button {
                0 20px 20px rgba(0,0,0,.15);
 }
 
-.main__image-subheader{
+.main__image-subheader {
   color: #46d6d6;
   text-shadow:
                0 3px 1px rgba(0,0,0,.1),
@@ -350,14 +283,19 @@ hr {
   border: 1px solid white;
 }
 
-.dropdown-menu-container--hidden{
+.dropdown-menu-container--hidden {
   display: none;
 }
 
 .dealers {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
   background-image: url("images/water-image.png");
   background-repeat: no-repeat;
   background-size: contain;
+  margin: 0 auto;
 }
 
 .steps {
@@ -371,12 +309,6 @@ hr {
   width: 390px;
 }
 
-.steps__text-container {
-  display: flex;
-  margin: 0;
-  flex-direction: column;
-}
-
 .steps__image {
   width: 100px;
   float: left;
@@ -388,11 +320,12 @@ hr {
   margin: 0;
 }
 
-.steps__instructions{
+.steps__instructions {
   margin: 0;
   padding-top: 5px;
 }
-.dealers__not-returned{
+
+.dealers__not-returned {
 	display: none;
 	padding: 300px 0px 100px;
   text-align: center;
@@ -401,20 +334,13 @@ hr {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.dealers {
-  margin: 0 auto;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-}
 
 .dealer-filter {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f5f5f5;
-  width: 1130px;
+  max-width: 1130px;
   border-radius: 17px;
   margin-top: 195px;
   height: 70px;
@@ -435,11 +361,11 @@ hr {
 }
 
 .dealer-filter__dealer-certification-checkbox {
-    background-color: white;
-    -webkit-appearance: none;
-    border: 1px solid lightgray;
-    padding: 11px;
-    border-radius: 5px;
+  background-color: white;
+  -webkit-appearance: none;
+  border: 1px solid lightgray;
+  padding: 11px;
+  border-radius: 5px;
 }
 
 .dealer-filter__dealer-certification-checkbox:checked {
@@ -447,7 +373,7 @@ hr {
   padding: 3px;
 }
 
-.filter__label-span{
+.filter__label-span {
   padding-left: 5px;
 }
 
@@ -455,14 +381,13 @@ label {
   display: flex;
   align-items: center;
   padding: 0px 20px;
-  margin: 0;
 }
 
-.dealer-filter__tool-tip{
+.dealer-filter__tool-tip {
   width:25px;
 }
 
-.dealer-container{
+.dealer__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -470,11 +395,7 @@ label {
   width: 1130px;
 }
 
-.template_container{
-	padding-bottom: 40px;
-}
-
-.dealer{
+.dealer {
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -484,28 +405,34 @@ label {
   height: 100%;
   margin-bottom: 40px;
   border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(130,133,116,1);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(130,133,116,1);
+  box-shadow: 0px 2px 10px 2px rgba(130,133,116,1);
+  overflow: hidden;
 }
 
-.dealer__name-container{
+.dealer__name-container {
   height:70px;
   display: flex;
   align-items: center;
 }
 
-.dealer__name{
-  color: #333;
+.dealer__name {
   font-weight: 300;
   padding-top: 0.5em;
   font-size: 20px;
   width: 250px;
 }
 
-.phone-icon{
+.phone-icon {
   width: 40px;
   padding: 5px;
 }
 
-.dealer__phone{
+.dealer__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #444;
   border-top: 1px solid lightgray;
   width: 310px;
@@ -514,12 +441,12 @@ label {
   font-size: 24px;
 }
 
-.dealer__phone:hover{
+.dealer__phone:hover {
   color: #444;
 }
 
-#dealer__email-modal{
-  display: block;
+#dealer__email-modal {
+  display: none;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -530,18 +457,18 @@ label {
   outline: 0px;
   padding-right: 0px;
 }
-.dealer__cant-talk{
+
+.dealer__cant-talk {
   font-size: 14px;
   font-style: italic;
-  color: #333;
   padding: 20px 0px;
 }
 
-.dealer__email--hidden{
+.dealer__email--hidden {
 	display: none;
 }
 
-.dealer__email-button{
+.dealer__email-button {
   display: flex;
   align-items: center;
   background-color: white;
@@ -553,43 +480,42 @@ label {
   cursor: pointer;
 }
 
-.email-Icon{
-  width: 20px;
+.dealer__email-icon {
   height: 15px;
   padding-right: 5px;
 }
 
-.dealer__email-modal-container{
+.dealer__email-modal-container {
   width: 540px;
   margin: 0 auto;
   margin-top: 40px;
 }
 
-.dealerEmailButton_name{
+.dealer__email-modal-title {
   padding: 0px 20px;
   font-weight: 300;
   font-size: 30px;
 }
 
-.modal_header-span-container{
+.modal__header-span-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal_email{
+.modal__email {
   padding: 20px 20px 0px;
   font-weight: 700;
   font-size: 12px;
 }
 
-.modal_exit{
+.modal__exit {
   cursor: pointer;
   width: 30px;
   text-align: center;
 }
 
-.modal_header{
+.modal__header {
   background-color: #083D83;
   color: white;
   display: flex;
@@ -597,22 +523,22 @@ label {
   text-align: left;
 }
 
-.modal_form-span-container{
+.modal__form-span-container {
   display: flex;
 }
 
-.modal_form-span{
+.modal__form-span {
   font-size:12px;
   padding: 20px 0px;
   margin-left: 30px;
 }
 
-.modal_form{
+.modal__form {
   background-color: white;
   cursor: default;
 }
 
-.modal_form-parent-container{
+.modal__form-parent-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -620,7 +546,7 @@ label {
   margin: 0 auto;
 }
 
-.modal_form-container{
+.modal__form-container {
   display: flex;
   flex-direction: column;
   padding: 0px 25px;
@@ -628,32 +554,31 @@ label {
   width: 90%;
 }
 
-.modal__input{
+.modal__input {
   height: 40px;
   border: 1px solid lightgray;
   font-size: 20px;
-  /* background-image: url('images/checkmark-circle.png'); */
 }
 
 
-.modal_spans{
+.modal__spans {
   text-align: left;
   font-weight: 600;
   font-size: 12px;
   padding-top: 15px;
 }
 
-.modal_form-container-phone{
+.modal__form-container-phone {
   width: 50%;
 }
 
-.modal_form-pool-question{
+.modal__form-pool-question{
   display: flex;
   padding: 5px 0px 25px;
   border-bottom: 1px solid lightgray;
 }
 
-.modal_form-pool-question-button{
+.modal__form-pool-question-button {
   padding: 5px 25px;
   margin: 0px 5px;
   background-color: #f5f5f5;
@@ -662,59 +587,31 @@ label {
   border-radius: 5px
 }
 
-.modal_form-pool-question-button:active {
+.modal__form-pool-question-button:active {
 	background-color: #46D6D6;
 	color: white;
 }
 
-.modal_form-pool-question-button:focus {
+.modal__form-pool-question-button:focus {
 	background-color: #46D6D6;
 	color: white;
 }
 
-.modal__form-input-title{
+.modal__form-input-title {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
 }
 
-/* .modal_form-container-name:valid, .modal_form-container-email:valid, .modal_form-container-phone:valid {
-  background-image: url('images/checkmark-circle.png');
-  background-repeat: no-repeat;
-  /* background-position-x: 390px; 
-}
-
-.modal_form-container-name:invalid, .modal_form-container-email:invalid, .modal_form-container-phone:invalid {
-  background-image: url('images/circle-form.png');
-  background-repeat: no-repeat;
-  /* background-position-x: 390px;
-} */
-
-#modal__form-input-phone{
+#modal__form-input-phone {
   width: 50%;
 }
 
-.modal__form--invalid{
+.modal__form--invalid {
   height: 30px;
 }
 
-
-.sendEmail{
-  padding: 0px 10px;
-  margin: 0px;
-  font-size: 12px;
-  font-weight: 800;
-  color: black;
-}
-
-/* .sendEmail-button{
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  align-items: center;
-} */
-
-.sendEmailLink{
+.dealer__email-send {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -723,15 +620,15 @@ label {
   font-size: 15px;
 }
 
-.sendEmailLink:hover{
+.dealer__email-send:hover {
   color: black;
 }
 
-.email-arrow{
+.dealer__email-arrow {
   padding-left: 10px;
 }
 
-.modal_form-footer-container{
+.modal__form-footer-container {
   margin-top: 30px;
   width: 111%;
   background-color: #f5f5f5;
@@ -741,53 +638,51 @@ label {
   justify-content: center;
 }
 
-.modal_form-footer{
+.modal__form-footer {
   font-size: 12px;
   margin: 0;
 }
 
-.dealer__hours{
-  padding-top: 10px;
+.dealer__hours {
+  padding-top: 50px;
   font-weight: 700;
 }
 
-.dealer__weekday-hours{
+.dealer__weekday-hours {
   padding: 10px 0px;
 }
 
-.dealer__saturday-hours{
+.dealer__saturday-hours {
   padding-bottom: 10px;
 }
 
-.dealer__certifications{
-    background-color: #f5f5f5;
-    margin-top: 50px;
-    min-height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
+.dealer__certifications {
+  background-color: #f5f5f5;
+  margin-top: 50px;
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.dealerUL{
+.dealer__cert-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   font-size: 12px;
   padding: 0px;
-  margin: 0px;
 }
 
-.dealerLI{
+.dealer__cert-list-item {
 	padding: 10px 30px;
-	text-align: left;
 }
 
-.cert_icons{
+.dealer__cert-icons {
   width: 20px;
   padding-right: 5px;
 }
 
-.bottom__header{
+.bottom__header {
   display: flex;
   align-items: center;
   color: white;
@@ -795,23 +690,23 @@ label {
   flex-direction: column;
 }
 
-.bottom__logo{
+.bottom__logo {
   width: 220px;
   padding-top: 50px;
   padding-bottom: 20px;
 }
 
-.bottom__social-media-container{
-  padding: 0px 0px 15px;
+.bottom__social-media-container {
+  padding-bottom: 15px;
   display: flex;
 }
 
-.bottom__tag{
+.bottom__tag {
   padding: 10px;
   height: 20px;
 }
 
-.footer{
+.footer {
   background-color: #216ddf;
   display: flex;
   justify-content: center;
@@ -819,14 +714,13 @@ label {
   height: 40px;
 }
 
-.copyright, .privacyPolicy{
+.copyright, .privacyPolicy {
   border-right: 1px solid white;
 }
 
-.footer__text{
+.footer__text {
   padding: 0px 15px;
-  font-size: 12px;
-  font-size: 11px;
+  font-size: 13px;
   color: white;
 }
 
@@ -834,7 +728,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.dealer__email-overlay{
+.dealer__email-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -864,39 +758,31 @@ MOBILE STYLESHEET
 ***************************************************
 ***************************************************
 ***************************************************/
+
 @media only screen and (max-width: 480px) {
-  html{
+  html {
     margin: 0;
   }
 
-  body{
+  body {
     position: inherit;
   }
 
-  .topmenu, .desktop_menu, .header, .dealer-filter, .modal_form-pool-question-button, .modal_form-footer-container, .footer{
+  .topmenu, .header, .dealer-filter, .modal__form-pool-question-button, .modal__form-footer-container{
     display: none;
   }
 
-  .mobile__topmenu{
+  .mobile__topmenu {
     display: flex;
     justify-content: center;
     background-color: #216ddf;
   }
 
-  .header__container{
-    padding: 12px 10px;
+  .header__menu-button {
     float: left;
   }
 
-  .header__menu-button{
-    float: left;
-  }
-
-  .navbar-light .navbar-toggler-icon {
-    background-image: none;
-  }
-
-  .mobile__header-container{
+  .mobile__header-container {
     display: flex;
     height: 50px;
     position: fixed;
@@ -908,17 +794,16 @@ MOBILE STYLESHEET
     align-items: center;
   }
 
-  .mobile-header__icon{
+  .mobile-header__icon {
     width: 70px;
     margin-top: 15px;
-    display: block;
   }
-  .mobile-header__container--hidden{
+  .mobile-header__container--hidden {
     display:none;
   }
-  .mobile-header__container--show{
+
+  .mobile-header__container--show {
     display: flex;
-    justify-content: center;
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -926,11 +811,13 @@ MOBILE STYLESHEET
     border-bottom: 5px solid #46d6d6;
     margin-left: -450px;
   }
-  .mobile-header__menu{
+
+  .mobile-header__menu {
     display: inline-block;
     width: 100%;
   }
-  .mobile-header__close{
+
+  .mobile-header__close {
     text-align: right;
     color: #46d6d6;
     background-color: white;
@@ -938,7 +825,8 @@ MOBILE STYLESHEET
     margin: 0;
     font-size: 25px;
   }
-  .mobile-header__list-item-container{
+
+  .mobile-header__list-item-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -947,12 +835,13 @@ MOBILE STYLESHEET
     background-color: #f5f5f5;
     color: black;
   }
-  .mobile-header__list{
+
+  .mobile-header__list {
     display: flex;
     flex-direction: column;
   }
 
-  .mobile-header__title{
+  .mobile-header__title {
     text-align: center;
     padding-bottom:20px;
     font-size: 18px;
@@ -962,139 +851,90 @@ MOBILE STYLESHEET
     margin: -1px;
   }
 
-  .pool-locator__button{
+  .pool-locator__button {
     color: #216ddf;
     background-color: white;
     border: 1px solid #216ddf;
     padding: 5px;
   }
-#navbarSupportedContent{
-  background-color: white;
-  z-index: 1;
-  margin-top: 42px;
-  margin-left: -220px;
-  border-top: 5px solid #46d6d6;
-  border-bottom: 5px solid #46d6d6;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-}
 
-  .mobile__header-logo{
+  .mobile__header-logo {
     height: 23px;
-    margin:0;
   }
 
-  .menu-mobile-icon{
-    width: 60px;
-    margin-top: -10px;
-    position: fixed;
-    margin-left: -20px;
-    z-index: 2;
-  }
-
-  .navbar-light .navbar-nav .nav-link{
-	  color: black;
-  }
-
-  .mobile__menu--title{
-    font-size: 14px;
-    text-align: center;
-    padding: 20px 0px;
-    color: #083d83;
-    font-weight: 700;
-  }
-
-  .nav-item-container{
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 2px solid white;
-  }
-  .pool-locator__form-container{
+  .pool-locator__form-container {
     max-height: 100%;
     margin: 0;
   }
-  .bg-faded{
-    background: none;
-  }
-	.dealers__not-returned{
+  
+	.dealers__not-returned {
 		padding: 100px 0px 50px;
 	}
 
-	.no_dealers_header{
-		font-size: 2rem;
-	}
-  .header__menu-button{
+  .header__menu-button {
     margin: 0;
     width: 100px;
     height: 30px;
     font-size: 12px;
-    display: flex;
-    align-items: center;
   }
 
-  .navbar-light .navbar-toggler {
-    border: none;
-	}
-
-  .main__image{
+  .main__image {
     background-image: url('images/Hero-image-mobile.png');
   }
 
-  .main__image-header{
+  .main__image-header {
     font-size: 30px;
     padding: 0px 35px;
   }
 
-  .main__image-subheader{
+  .main__image-subheader {
     font-size: 15px;
     text-shadow: none;
     margin: 0;
   }
 
-  hr{
+  hr {
     width:40%;
   }
 
-  .steps__step{
+  .steps__step {
     width: 90%;
     padding: 10px 5px;
   }
 
-  .mobile__steps--border{
+  .mobile__steps--border {
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
   }
 
-  .steps{
+  .steps {
     flex-direction: column;
     margin-top: 0;
     align-items: center;
   }
 
-  .steps__image{
+  .steps__image {
     width: 80px;
     padding-left: 10px;
   }
 
-  .steps__title{
+  .steps__title {
     font-size: 15px;
     font-weight: 700;
     margin: 0;
   }
 
-  .steps__instructions{
+  .steps__instructions {
     font-size: 2vh;
     margin: 0;
     padding-top: 10px;
   }
 
-  .dropdown-menu-container--hidden{
+  .dropdown-menu-container--hidden {
     display: none;
   }
 
-  .dropdown-menu-container--show{
+  .dropdown-menu-container--show {
     display: flex;
     justify-content: center;
     background-color: #f5f5f5;
@@ -1102,7 +942,8 @@ MOBILE STYLESHEET
     margin-top: -14px;
     transition: all 0.5s ease;
   }
-  .dropdown{
+
+  .dropdown {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -1110,46 +951,46 @@ MOBILE STYLESHEET
     background-color: #f5f5f5;
   }
 
-  .filter-results-container{
+  .filter-results-container {
     display: flex;
   }
-  .dropdown__container--content{
+
+  .dropdown__container--content {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
     padding: 10px 0px;
   }
 
-  
-
-  .dropdown-button{
+  .dropdown-button {
     padding: 15px 12px;
     border: none;
     border: 1px solid lightgray;
   }
-  .dropdown-button::after{
+
+  .dropdown-button::after {
   display: inline-block;
-    width: 0;
-    height: 0;
-    vertical-align: .255em;
-    content: "";
-    border-top: .3em solid;
-    border-right: .3em solid transparent;
-    border-bottom: 0;
-    border-left: .3em solid transparent;
+  width: 0;
+  height: 0;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
   }
 
-  .dropdown-filter{
+  .dropdown-filter {
     list-style-type: none;
     padding: 5px 0px;
   }
 
-  .mobile_dealer-filter-certs{
+  .mobile_dealer-filter-certs {
     font-size: 15px;
 	  padding: 0px 0px 0px 15px
   }
 
-  .dropdown-menu{
+  .dropdown-menu {
     display: flex;
     width: 80%;
     margin: 0;
@@ -1160,14 +1001,14 @@ MOBILE STYLESHEET
     padding: 15px;
   }
 
-  .mobile__dealer-filter__count{
+  .mobile__dealer-filter__count {
     display: block;
     padding: 0px;
     font-size: 15px;
     border: none;
   }
 
-  .filter-results{
+  .filter-results {
     margin: 0;
     padding: 12px 15px;
     font-size: 15px;
@@ -1176,16 +1017,16 @@ MOBILE STYLESHEET
     background-color: white;
   }
 
-  label{
+  label {
     font-size: 12px;
   }
 
-  .tool__tip--container{
+  .tool__tip--container {
     display: flex;
     align-items: center;
   }
 
-  .dealer-filter__tool-tip{
+  .dealer-filter__tool-tip {
     width:20px;
   }
 
@@ -1193,60 +1034,51 @@ MOBILE STYLESHEET
       padding: 8px;
   }
 
-  .dealers__returned{
+  .dealers__returned {
     margin-top: 50px;
   }
 
-  .dealer-container{
+  .dealer__container {
     width: auto;
     justify-content: center;
     padding: 0px;
   }
 
-  .template_container{
-    width: 90%;
-  }
-
-  .dealer{
+  .dealer {
+    margin: 0;
     width: 90%;
     border-radius: 0px;
-    margin: 0;
+    box-shadow: none;
   }
 
-  .phone-icon{
-    width: 25px;
-    height: 25px;
+  .phone-icon {
+    width: 40px;
     content: url("images/phone-icon-mobile.png");
     padding: 0px;
   }
 
-  .tap-to-call{
-	  display: inline;
-	  color: white;
-	  font-size: 12px;
-  }
-
-  .dealer__phone{
+  .tap-to-call, .dealer__phone {
     color: white;
     background-color: #216ddf;
     width: 80%;
-    padding: 10px 0px;
+    padding: 10px 10px;
     display: flex;
     justify-content: space-around;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
-	border-radius: 3px;
-	align-items: center;
+	  border-radius: 3px;
+	  align-items: center;
   }
 
-  .dealer__cant-talk{
+  .dealer__cant-talk {
     font-size: 10px;
   }
 
-  .dealerLI{
+  .dealer__cert-list-item {
     font-size: 10px;
   }
-  .dealer__email-modal-container{
+
+  .dealer__email-modal-container {
     width: auto;
     display: flex;
     flex-direction: column;
@@ -1254,37 +1086,32 @@ MOBILE STYLESHEET
     margin: auto;
   }
 
-  .modal_form-span {
+  .modal__form-span {
     font-size: 16px;
     margin-left: 20px;
     text-align: left;
     padding-right: 16px;
   }
 
-  .modal_form-zipcode-span, .modal_form-container-zipcode{
-    display: flex;
-    width: 50%;
+  .modal__form-container-phone {
+    width: 70%;
   }
 
-  .modal_form-container-phone {
-    width: 70%;
-   }
-
-  .mobile_checkbox{
+  .mobile_checkbox {
     display: flex;
     -webkit-appearance: none;
     border: 1px solid lightgray;
     background-color: white;
     padding: 11px;
     border-radius: 5px;
-    }
+  }
 
-  .mobile_checkbox:checked{
+  .mobile_checkbox:checked {
     border: 8px solid #216ddf;
     padding: 3px;
   }
 
-  .radio_label_text{
+  .radio_label_text {
     padding-left: 7px;
   }
 
@@ -1292,19 +1119,20 @@ MOBILE STYLESHEET
     padding-left: 0;
   }
 
-.radio_label_text {
-  display: block;
-}
+  .radio_label_text {
+    display: block;
+  }
   
 
-  .email-arrow{
-    visibility: hidden;
-  }
-  .sendEmail{
+  .dealer__email-arrow {
     visibility: hidden;
   }
 
-  .sendEmail:after{
+  .dealer__email-send  {
+    visibility: hidden;
+  }
+
+  .dealer__email-send:after {
     content: "Send";
     color: #46d6d6;
     visibility: visible;
@@ -1313,55 +1141,39 @@ MOBILE STYLESHEET
   }
 
   .topmenu__link-container {
-    margin: 0;
-    display: flex;
-    justify-content: center;
     padding: 10px 25px 10px;
     border-bottom: 1px solid #a0b5d5;
   }
 
-  .topmenu__link{
+  .topmenu__link {
     font-size: 11px;
     padding: 0px 15px;
     margin: 0;
   }
 
-  .pool-locator__logo{
+  .pool-locator__logo {
     width: 80%;
   }
 
-  .bottom__logo{
+  .bottom__logo {
     width: 180px;
   }
 
-  .bottom__social-media-container{
+  .bottom__social-media-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
 
-  .mobile__dealer-dist{
+  .mobile__dealer-dist {
     border-right: 1px solid white;
   }
 
-  
-
-  .topmenu__action__icon{
+  .topmenu__action__icon {
     width: 15px;
   }
 
-  .mobile__footer{
-    background-color: #216ddf;
-    display: flex;
-    padding: 5px 0px;
-    justify-content: center;
-  }
-
-  .modal--active .modal {
-    display: block;
-  }
-
-  .dealer__email-overlay{
+  .dealer__email-overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1375,13 +1187,13 @@ MOBILE STYLESHEET
     overflow: scroll;
   }
 
-   .modal {
+  .modal {
     display: flex;
     z-index: 2;
   }
 
   body.modal-open {
     overflow: hidden;
-}
+  }
   
 }
